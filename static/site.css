@@ -1,0 +1,10 @@
+.melon_image {
+    width: 300px;
+    height: 300px;
+}
+
+#melon-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
