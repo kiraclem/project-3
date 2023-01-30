@@ -1,6 +1,5 @@
-{% extends base.html %}
+{% extends 'base.html' %}
 {% block body %}
-    {% for melon in melon_list %}
         <h3>{{ melon.common_name }}</h3>
         <img class="melon_image" src="{{ melon.image_url }}" alt="picture of a {{ melon.common_name }}">
         <h4>{{ melon.price_str() }}</h4>
@@ -10,6 +9,6 @@
         {% else %}
             <h4> Not Seedless </h4>
         {% endif %}
-    {% endfor %}
-        <a class="btn btn-primary">Add to Cart</a>
+
+        <a href="{{url_for('add_to_cart', melon_id= melon.melon_id)}}" class="btn btn-primary">Add to Cart</a>
 {% endblock %}
